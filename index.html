@@ -663,6 +663,72 @@
             border-top: 1px solid rgba(255,255,255,0.15);
         }
         
+        /* Non-Official Links Bar */
+        .unofficial-links-bar {
+            background: #1a1a2e;
+            border-bottom: 3px solid var(--warning-amber);
+            padding: 14px 20px;
+        }
+
+        .unofficial-links-inner {
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .unofficial-links-label {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warning-amber);
+            margin-bottom: 10px;
+        }
+
+        .unofficial-links-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .unofficial-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s, transform 0.15s;
+        }
+
+        .unofficial-link:hover {
+            opacity: 0.85;
+            transform: translateY(-1px);
+        }
+
+        .unofficial-link-x {
+            background: #000000;
+            color: #ffffff;
+            border: 1px solid #333;
+        }
+
+        .unofficial-link-reddit {
+            background: #ff4500;
+            color: #ffffff;
+        }
+
+        .unofficial-link-web {
+            background: #1565c0;
+            color: #ffffff;
+        }
+
+        .unofficial-link-icon {
+            font-size: 15px;
+            line-height: 1;
+        }
+
         /* Responsive */
         @media (max-width: 640px) {
             .hero-title {
@@ -746,6 +812,26 @@
         </div>
     </header>
     
+    <div class="unofficial-links-bar">
+        <div class="unofficial-links-inner">
+            <div class="unofficial-links-label">🔗 Enlaces no oficiales / Non-official links</div>
+            <div class="unofficial-links-list">
+                <a href="https://x.com/Burjassot228" class="unofficial-link unofficial-link-x" target="_blank" rel="noopener noreferrer">
+                    <span class="unofficial-link-icon">𝕏</span>
+                    <span>@Burjassot228 en X</span>
+                </a>
+                <a href="https://www.reddit.com/r/HorroresInmobiliarios/s/543YMCdCzR" class="unofficial-link unofficial-link-reddit" target="_blank" rel="noopener noreferrer">
+                    <span class="unofficial-link-icon">🟠</span>
+                    <span>Reddit — r/HorroresInmobiliarios</span>
+                </a>
+                <a href="https://www.avenidadeburjassot228.com" class="unofficial-link unofficial-link-web" target="_blank" rel="noopener noreferrer">
+                    <span class="unofficial-link-icon">🌐</span>
+                    <span>avenidadeburjassot228.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <nav class="quick-nav">
         <div class="nav-inner">
             <a href="#warnings" class="nav-item">Advertencias</a>
