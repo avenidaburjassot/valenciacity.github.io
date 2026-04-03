@@ -1379,25 +1379,30 @@
                 overlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
 
+                function handleOverlayClick(e) {
+                    if (e.target === overlay) {
+                        closePopup();
+                    }
+                }
+
+                function handleKeydown(e) {
+                    if (e.key === 'Escape') {
+                        closePopup();
+                    }
+                }
+
                 function closePopup() {
                     overlay.classList.remove('active');
                     document.body.style.overflow = '';
                     sessionStorage.setItem('policePopupDismissed', '1');
+                    closeBtn.removeEventListener('click', closePopup);
+                    overlay.removeEventListener('click', handleOverlayClick);
+                    document.removeEventListener('keydown', handleKeydown);
                 }
 
                 closeBtn.addEventListener('click', closePopup);
-
-                overlay.addEventListener('click', function (e) {
-                    if (e.target === overlay) {
-                        closePopup();
-                    }
-                });
-
-                document.addEventListener('keydown', function (e) {
-                    if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                        closePopup();
-                    }
-                });
+                overlay.addEventListener('click', handleOverlayClick);
+                document.addEventListener('keydown', handleKeydown);
             }
         })();
     </script>
