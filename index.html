@@ -912,6 +912,98 @@
             margin-top: 2px;
         }
 
+        /* Critical Incident Block */
+        .warning-block--critical {
+            background: linear-gradient(135deg, #1a0000 0%, #3d0000 100%);
+            border: 2px solid #ff1744;
+            color: #f5f5f5;
+        }
+
+        .warning-block--critical .warning-label {
+            color: #ff8a80;
+        }
+
+        .warning-block--critical .warning-title {
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        .warning-block--critical .warning-body {
+            color: #e0e0e0;
+        }
+
+        .warning-block--critical .warning-body ul {
+            margin: 10px 0 10px 20px;
+            line-height: 1.75;
+        }
+
+        .warning-block--critical .warning-body ul li {
+            margin-bottom: 4px;
+        }
+
+        .warning-block--critical .warning-body-en {
+            color: #bdbdbd;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 12px;
+            margin-top: 16px;
+        }
+
+        .warning-block--critical .warning-body-en ul {
+            margin: 10px 0 10px 20px;
+            line-height: 1.75;
+        }
+
+        .warning-block--critical .warning-body-en ul li {
+            margin-bottom: 4px;
+        }
+
+        .warning-block--critical .incident-police-quote {
+            background: rgba(255,255,255,0.07);
+            border-left: 4px solid #ff8a80;
+            padding: 14px 18px;
+            margin-top: 14px;
+            border-radius: 0 6px 6px 0;
+            font-size: 14px;
+            color: #e0e0e0;
+            line-height: 1.75;
+        }
+
+        .incident-photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            margin: 18px 0;
+        }
+
+        .incident-photo-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .incident-photo-item img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.15);
+            display: block;
+        }
+
+        .incident-photo-caption {
+            font-size: 11px;
+            color: #9e9e9e;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 640px) {
+            .incident-photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         .reviews-list {
             display: flex;
             flex-direction: column;
@@ -1049,6 +1141,7 @@
     <nav class="quick-nav">
         <div class="nav-inner">
             <a href="#warnings" class="nav-item">Advertencias</a>
+            <a href="#incident" class="nav-item">🚨 Incidente Crítico</a>
             <a href="#entity" class="nav-item">Entidad</a>
             <a href="#safety" class="nav-item">Seguridad</a>
             <a href="#legal" class="nav-item">Asuntos Legales</a>
@@ -1073,7 +1166,76 @@
                 Multiple compliance issues have been documented at Daphne Inn Valencia (228 Burjassot Avenue), including absence of mandatory rental registration, lack of habitability license, and fire safety deficiencies. Several active administrative and legal proceedings are related to this accommodation and the owning entity Valencia City Roof Terrazas S.L.
             </p>
         </div>
-        
+
+        <!-- Critical Incident Section — 26 March 2026 -->
+        <div id="incident" class="warning-block warning-block--critical">
+            <div class="warning-header">
+                <div class="warning-icon">🚨</div>
+                <span class="warning-label">Incidente Crítico / Critical Incident</span>
+            </div>
+            <h2 class="warning-title">🚨 Incidente Crítico — 26 de marzo de 2026 / Critical Incident — 26 March 2026</h2>
+            <div class="warning-body">
+                <p>El 26 de marzo de 2026, los operadores del edificio obstruyeron físicamente una entrega esencial de agua potable (Aquaservice), impidiendo al repartidor acceder al edificio. Durante el incidente:</p>
+                <ul>
+                    <li>Michael bloqueó físicamente la entrada del edificio, impidiendo el paso al repartidor.</li>
+                    <li>Daphne gritó y utilizó repetidamente el insulto «okupa» hacia el inquilino.</li>
+                    <li>Daphne señaló un cartel de «no delivery de comida» a pesar de que se trataba de una entrega esencial de agua, no de comida.</li>
+                    <li>Daphne declaró: «Este es mi edificio, yo pongo las normas».</li>
+                    <li>Se observó que Daphne sujetaba físicamente a Michael, aparentemente para evitar que se acercara al inquilino.</li>
+                    <li>El repartidor presenció directamente todo el incidente.</li>
+                    <li>El incidente fue grabado en vídeo.</li>
+                </ul>
+                <p>Denuncia presentada ante la Policía Nacional (Atestado 6913/26). Este incidente representa una escalada significativa del patrón documentado de acoso inmobiliario.</p>
+                <p><strong>Denuncia presentada ante la Policía Nacional — Atestado 6913/26</strong></p>
+                <blockquote class="incident-police-quote">Según el atestado policial: «El inquilino bajó para darle paso y en ese momento se encontró a sus caseros que no dejaban entrar al repartidor y comenzaron a decirle al denunciante que era un ocupa, que no podía dejar entrar a gente. El inquilino comenzó a grabarlo con el teléfono móvil y en ese momento su casero se abalanzó sobre el denunciante pero lo evitó su mujer (la casera) y ella se interpuso entre ambos y evitó que pegara al inquilino. Posteriormente, el hombre, que se llama Michael se puso en la puerta del patio para impedirle el paso pero posteriormente se quitó y cuando el denunciante se marchó a su domicilio ese hombre seguía gritándole.»</blockquote>
+
+                <div class="incident-photo-grid">
+                    <div class="incident-photo-item">
+                        <img src="assets/img/one.jpg" alt="Incidente del 26 de marzo de 2026 — obstrucción de entrega esencial de agua potable (foto 1) / Incident of 26 March 2026 — obstruction of essential drinking water delivery (photo 1)" loading="lazy">
+                        <p class="incident-photo-caption">Foto 1 / Photo 1</p>
+                    </div>
+                    <div class="incident-photo-item">
+                        <img src="assets/img/2.jpg" alt="Incidente del 26 de marzo de 2026 — obstrucción de entrega esencial de agua potable (foto 2) / Incident of 26 March 2026 — obstruction of essential drinking water delivery (photo 2)" loading="lazy">
+                        <p class="incident-photo-caption">Foto 2 / Photo 2</p>
+                    </div>
+                    <div class="incident-photo-item">
+                        <img src="assets/img/3.jpg" alt="Incidente del 26 de marzo de 2026 — obstrucción de entrega esencial de agua potable (foto 3) / Incident of 26 March 2026 — obstruction of essential drinking water delivery (photo 3)" loading="lazy">
+                        <p class="incident-photo-caption">Foto 3 / Photo 3</p>
+                    </div>
+                    <div class="incident-photo-item">
+                        <img src="assets/img/4.jpg" alt="Incidente del 26 de marzo de 2026 — obstrucción de entrega esencial de agua potable (foto 4) / Incident of 26 March 2026 — obstruction of essential drinking water delivery (photo 4)" loading="lazy">
+                        <p class="incident-photo-caption">Foto 4 / Photo 4</p>
+                    </div>
+                    <div class="incident-photo-item">
+                        <img src="assets/img/5.jpg" alt="Incidente del 26 de marzo de 2026 — obstrucción de entrega esencial de agua potable (foto 5) / Incident of 26 March 2026 — obstruction of essential drinking water delivery (photo 5)" loading="lazy">
+                        <p class="incident-photo-caption">Foto 5 / Photo 5</p>
+                    </div>
+                    <div class="incident-photo-item">
+                        <img src="assets/img/desquiciada-26-03.jpg" alt="Daphne Javiera Friedrichs durante el incidente del 26 de marzo de 2026 / Daphne Javiera Friedrichs during the incident of 26 March 2026" loading="lazy">
+                        <p class="incident-photo-caption">Daphne Javiera Friedrichs — 26 de marzo de 2026 / 26 March 2026</p>
+                    </div>
+                    <div class="incident-photo-item">
+                        <img src="assets/img/pointing-26-03.jpg" alt="Daphne Friedrichs señalando el cartel durante el incidente del 26 de marzo de 2026 / Daphne Friedrichs pointing at the sign during the incident of 26 March 2026" loading="lazy">
+                        <p class="incident-photo-caption">Daphne Friedrichs señalando el cartel / pointing at the sign — 26.03.2026</p>
+                    </div>
+                </div>
+            </div>
+            <div class="warning-body-en">
+                <p><em>On 26 March 2026, the building operators physically obstructed an essential drinking water delivery (Aquaservice), preventing the delivery driver from entering the building. During the incident:</em></p>
+                <ul>
+                    <li><em>Michael physically blocked the building entrance, preventing the driver from entering.</em></li>
+                    <li><em>Daphne shouted and repeatedly used the slur 'okupa' toward the tenant.</em></li>
+                    <li><em>Daphne pointed at a 'no food delivery' sign despite this being an essential water delivery, not food.</em></li>
+                    <li><em>Daphne stated: 'This is my building, I make the rules.'</em></li>
+                    <li><em>Daphne was observed physically holding Michael back, apparently to prevent him from approaching the tenant.</em></li>
+                    <li><em>The delivery driver directly witnessed the entire incident.</em></li>
+                    <li><em>The incident was recorded on video.</em></li>
+                </ul>
+                <p><em>Police report filed with the National Police (Atestado 6913/26). This incident represents a significant escalation of the documented pattern of real estate harassment.</em></p>
+                <p><em><strong>Police report filed with the National Police — Atestado 6913/26</strong></em></p>
+            </div>
+        </div>
+
         <!-- Entity Section -->
         <section id="entity" class="content-section">
             <div class="section-top">
