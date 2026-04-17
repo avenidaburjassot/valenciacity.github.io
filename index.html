@@ -761,6 +761,56 @@
             }
         }
 
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            background: var(--alert-red);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            z-index: 90;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.2s;
+            box-shadow: 0 4px 12px rgba(183, 28, 28, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--alert-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(183, 28, 28, 0.4);
+        }
+
+        .back-to-top:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            .back-to-top {
+                bottom: 16px;
+                right: 16px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+
         /* Police Report Popup */
         .police-popup-overlay {
             position: fixed;
@@ -2438,6 +2488,9 @@
         </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba / Back to top" title="Volver arriba / Back to top">▲</button>
+
     <script>
         (function () {
             if (!sessionStorage.getItem('policePopupDismissed')) {
@@ -2472,6 +2525,26 @@
                 overlay.addEventListener('click', handleOverlayClick);
                 document.addEventListener('keydown', handleKeydown);
             }
+        })();
+
+        // Back to Top Button
+        (function () {
+            var backToTopBtn = document.getElementById('backToTop');
+
+            function toggleVisibility() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            }
+
+            backToTopBtn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            window.addEventListener('scroll', toggleVisibility);
+            toggleVisibility();
         })();
     </script>
 </body>
