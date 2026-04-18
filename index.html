@@ -1278,6 +1278,215 @@
         .last-updated-separator {
             margin: 0 10px;
         }
+
+        /* ===== Night Reading Mode ===== */
+        [data-theme="dark"] {
+            --bg-main: #121212;
+            --bg-section: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --text-muted: #888888;
+            --border-light: #333333;
+            --warning-bg: #2a1a00;
+            --link-blue: #64b5f6;
+        }
+
+        [data-theme="dark"] body {
+            background: var(--bg-main);
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .hero-header {
+            background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+        }
+
+        [data-theme="dark"] .quick-nav {
+            background: #1a1a1a;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        [data-theme="dark"] .nav-item:hover {
+            background: #2a1a1a;
+        }
+
+        [data-theme="dark"] .warning-block {
+            background: linear-gradient(135deg, #2a0a0a 0%, #1a0505 100%);
+            border-color: #c62828;
+        }
+
+        [data-theme="dark"] .warning-block .warning-label {
+            color: #ef9a9a;
+        }
+
+        [data-theme="dark"] .section-top {
+            background: linear-gradient(to right, #2a2a2a 0%, #1e1e1e 100%);
+        }
+
+        [data-theme="dark"] .info-card {
+            background: #2a2a2a;
+        }
+
+        [data-theme="dark"] .badge-danger {
+            background: linear-gradient(135deg, #2a0a0a 0%, #1a0505 100%);
+            color: #ef9a9a;
+        }
+
+        [data-theme="dark"] .badge-warning {
+            background: linear-gradient(135deg, #2a1a00 0%, #1a1000 100%);
+            color: #ffb74d;
+        }
+
+        [data-theme="dark"] .case-card {
+            background: #252525;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .link-card {
+            background: #2a2a2a;
+        }
+
+        [data-theme="dark"] .link-card:hover {
+            background: #333;
+        }
+
+        [data-theme="dark"] .platform-table th {
+            background: #2a2a2a;
+            color: #aaa;
+        }
+
+        [data-theme="dark"] .platform-table td {
+            border-bottom-color: #333;
+        }
+
+        [data-theme="dark"] .disclaimer-banner {
+            background: #1a1a1a;
+            border-top-color: #546e7a;
+        }
+
+        [data-theme="dark"] .disclaimer-heading {
+            color: #b0bec5;
+        }
+
+        [data-theme="dark"] .disclaimer-block p {
+            color: #90a4ae;
+        }
+
+        [data-theme="dark"] .disclaimer-divider {
+            border-top-color: #37474f;
+        }
+
+        [data-theme="dark"] .reviews-source-notice {
+            background-color: #2a2a2a;
+        }
+
+        [data-theme="dark"] .reviews-source-text {
+            color: #ccc;
+        }
+
+        [data-theme="dark"] .reviews-source-text-en {
+            color: #999;
+        }
+
+        [data-theme="dark"] .reviews-list {
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .review-card {
+            background-color: #252525;
+            border-bottom-color: #333;
+        }
+
+        [data-theme="dark"] .review-reviewer {
+            color: #e0e0e0;
+        }
+
+        [data-theme="dark"] .review-text {
+            color: #bbb;
+        }
+
+        [data-theme="dark"] .review-text-en {
+            color: #999;
+        }
+
+        [data-theme="dark"] .faq-answer-en {
+            border-top-color: #333;
+        }
+
+        [data-theme="dark"] .status-item {
+            border-bottom-color: #333;
+        }
+
+        [data-theme="dark"] .hero-image-wrap img {
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .police-popup {
+            background: #1e1e1e;
+        }
+
+        [data-theme="dark"] .police-popup-body p {
+            color: var(--text-secondary);
+        }
+
+        [data-theme="dark"] .police-popup-close {
+            color: #888;
+        }
+
+        [data-theme="dark"] .police-popup-close:hover {
+            color: #e0e0e0;
+        }
+
+        [data-theme="dark"] .info-card--highlight {
+            background: linear-gradient(135deg, #2a1a00 0%, #1a1000 100%);
+        }
+
+        /* Night Mode Toggle Button */
+        .night-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 200;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--border-light);
+            background: var(--bg-section);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            line-height: 1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            transition: background 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.15s;
+        }
+
+        .night-toggle:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .night-toggle:active {
+            transform: scale(0.95);
+        }
+
+        [data-theme="dark"] .night-toggle {
+            background: #333;
+            border-color: #555;
+            color: #ffd54f;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 600px) {
+            .night-toggle {
+                top: 10px;
+                right: 10px;
+                width: 38px;
+                height: 38px;
+                font-size: 17px;
+            }
+        }
     </style>
     
     <script type="application/ld+json">
@@ -2488,6 +2697,9 @@
         </div>
     </div>
 
+    <!-- Night Mode Toggle -->
+    <button class="night-toggle" id="nightToggle" aria-label="Modo nocturno / Night mode" title="Modo nocturno / Night mode">🌙</button>
+
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Volver arriba / Back to top" title="Volver arriba / Back to top">▲</button>
 
@@ -2525,6 +2737,38 @@
                 overlay.addEventListener('click', handleOverlayClick);
                 document.addEventListener('keydown', handleKeydown);
             }
+        })();
+
+        // Night Mode Toggle
+        (function () {
+            var toggle = document.getElementById('nightToggle');
+            var html = document.documentElement;
+
+            function setTheme(dark) {
+                if (dark) {
+                    html.setAttribute('data-theme', 'dark');
+                    toggle.textContent = '☀️';
+                    toggle.setAttribute('aria-label', 'Modo diurno / Day mode');
+                    toggle.setAttribute('title', 'Modo diurno / Day mode');
+                    localStorage.setItem('nightMode', '1');
+                } else {
+                    html.removeAttribute('data-theme');
+                    toggle.textContent = '🌙';
+                    toggle.setAttribute('aria-label', 'Modo nocturno / Night mode');
+                    toggle.setAttribute('title', 'Modo nocturno / Night mode');
+                    localStorage.removeItem('nightMode');
+                }
+            }
+
+            // Apply saved preference on load
+            if (localStorage.getItem('nightMode') === '1') {
+                setTheme(true);
+            }
+
+            toggle.addEventListener('click', function () {
+                var isDark = html.getAttribute('data-theme') === 'dark';
+                setTheme(!isDark);
+            });
         })();
 
         // Back to Top Button
